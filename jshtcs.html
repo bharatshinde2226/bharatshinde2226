@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #log{
+            font-size: 20px;
+            text-shadow: 1px 1px black;
+        }
+        #sign{
+            font-size: 20px;
+            text-shadow: 1px 1px black;
+        }
+     .box{
+        display: flex;
+        background-color:rgb(16, 111, 244);
+        gap: 10px;
+        height: 500px;
+        width: 100%;
+     }
+     .box1{
+        background-color:white;
+        height: 250px;
+        width: 250px;
+        text-align: center;
+        margin-top: 11%;
+        border-radius: 10%;
+        margin-left: 25%;
+        padding-top: 4%;
+     }
+     .box2{
+        background-color:white;
+        height: 280px;
+        width: 280px;
+        text-align: center;
+        margin-top: 8%;
+        border-radius: 10%;
+        padding-top: 6%;
+     }
+     button{
+        width: 180px;
+        background-color:rgb(16, 111, 244);
+        border-radius: 5px;
+     }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <form>
+                <label id="log">Login</label><br><br>
+                <input id="email" type="email" placeholder="Email"><br><br>
+                <input id="pass" type="password" placeholder="password"><br>
+                <p><a href="#">forgot password?</a></p><br>   
+                <button id="myform">Login</button><br>
+             <h6>Don't have an account? Sign up </h6>
+            </form>
+        </div>
+        <div class="box2">
+            <form id="form">
+                <label id="sign">Signup</label><br><br>
+                <input id="mail" type="email" placeholder="Email"><br><br>
+                <input id="password"  type="password" placeholder="password"><br><br>
+                <input id="password" type="password" placeholder="Confirm password">
+                <br><br>
+                <button>Signup</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const myform = document.querySelector("#myform");
+        myform.addeventlistener("Login",()=>
+        {
+            let email = document.querySelector("#email").value;
+            let pass = document.querySelector("#pass").value;
+            
+            if (email == "bharatshinde12@gmail.com")
+            {
+                if(pass == "bharat123")
+                {
+                    alert("you are login successfully")
+                }
+                else{
+                    alert("invalid email");
+                }
+                
+            }
+            else{
+                alert("user not found.");
+            }
+            
+            
+        })
+    </script>
+</body>
+</html>
